@@ -1,4 +1,4 @@
-import { getSkillset } from "@/app/lib/data";
+import { getSkillset } from "@/lib/data";
 import Image from "next/image";
 
 export default function About() {

@@ -1,12 +1,15 @@
 import Image from "next/image";
-import { Project } from "@/app/lib/definition";
+import ReactMarkdown from "react-markdown";
+import { Project } from "@/lib/definition";
 
 export default function ProjectItem({ project }: { project: Project }) {
   return (
     <article className="md:flex md:justify-center md:item-center md:gap-20 py-10 px-10">
       <div className="text-content mb-10 md:mb-0">
         <h3 className="font-bold text-xl text-primary mb-5">{project.title}</h3>
-        <div dangerouslySetInnerHTML={{ __html: project.description }} />
+        <div className="prose prose-neutral max-w-none text-justify [&_p]:mb-3 [&_a]:text-primary [&_a]:underline">
+          <ReactMarkdown>{project.description}</ReactMarkdown>
+        </div>
         <div className="mt-7.5 flex flex-wrap gap-3">
           {project.tags.map((tag, i) => (
             <div

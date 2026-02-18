@@ -1,5 +1,5 @@
 import ProjectItem from "./project-item";
-import { getProjects } from "@/app/lib/data";
+import { getProjects } from "@/lib/projects";
 
 export default function projects() {
   const projects = getProjects();

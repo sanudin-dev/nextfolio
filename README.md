@@ -41,7 +41,7 @@ A modern, responsive portfolio website built with Next.js 15 and React 19, showc
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ssanudin/nextfolio.git
+git clone https://github.com/sanudin-dev/nextfolio.git
 cd nextfolio
 ```
 
@@ -117,12 +117,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Sanudin**
-- Website: [https://sanud.in](https://sanud.in)
-- GitHub: [@ssanudin](https://github.com/ssanudin)
+- Website: [https://sanudin.dev](https://sanudin.dev)
+- GitHub: [@sanudin-dev](https://github.com/sanudin-dev)
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/ssanudin/nextfolio/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/sanudin-dev/nextfolio/issues).
 
 ---
 

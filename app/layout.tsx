@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { montserrat } from "./ui/fonts";
-import "@/app/ui/globals.css";
+import { montserrat } from "@/ui/fonts";
+import { ThemeProvider } from "@/ui/theme-provider";
+import "@/ui/globals.css";
 
 export const metadata: Metadata = {
   title: "Sanudin | Software Engineer and Developer",
   description:
     "A software engineer and developer passionate about helping entrepreneurs create great products.",
-  authors: [{ name: "Sanudin", url: "https://sanud.in" }],
+  authors: [{ name: "Sanudin", url: "https://sanudin.dev" }],
   keywords: [
     "sanudin",
-    "ssanudin",
+    "sanudin-dev",
     "software engineer",
     "developer",
     "web developer",
@@ -38,8 +39,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${montserrat.className} antialiased`}>{children}</body>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className={`${montserrat.className} antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

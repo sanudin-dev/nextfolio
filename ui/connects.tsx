@@ -41,7 +41,7 @@ export default function Connects() {
       </a>
       <a
         className="hover:text-title transition-all transition-discrete bg-transparent flex items-center text-content"
-        href="https://github.com/ssanudin"
+        href="https://github.com/sanudin-dev"
         target="_blank"
         rel="noopener noreferrer"
       >
