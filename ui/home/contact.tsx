@@ -14,9 +14,9 @@ export default function Contact() {
         <h2 className="font-bold text-2xl mb-4 text-white">
           Contact
         </h2>
-        <p>I'm currently focused on my full-time role, but I'm always open to thoughtful conversations</p>
+        <p>I&apos;m currently focused on my full-time role, but I&apos;m always open to thoughtful conversations</p>
         <p>— about engineering, collaboration, or just connecting with people who build things.</p>
-        <p>Feel free to reach out if you'd like to connect.</p>
+        <p>Feel free to reach out if you&apos;d like to connect.</p>
         <div className="flex justify-center items-center gap-5 mt-6">
           <a
             href="mailto:hello.sanudin@gmail.com"

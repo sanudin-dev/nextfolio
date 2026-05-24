@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { getPosts } from "@/lib/blog";
-import { Button } from "@/ui/button";
 import { Separator } from "@/ui/separator";
 
 export const metadata = {
@@ -14,7 +13,7 @@ export default function BlogPage() {
   return (
     <div className="container mx-auto px-4 py-12 max-w-3xl">
       <h1 className="text-3xl font-bold text-title mb-2 text-center">Notes from the journey</h1>
-      <p className="text-content text-center">Things I've learned, problems I've solved, and ideas I want to remember.</p>
+      <p className="text-content text-center">Things I&apos;ve learned, problems I&apos;ve solved, and ideas I want to remember.</p>
       <p className="text-content text-center">Written for my future self, shared for anyone who finds it useful, and kept for my kids to read someday.</p>
 
       <Separator className="mt-5 mb-10 border-primary" />
