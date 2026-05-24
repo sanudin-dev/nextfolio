@@ -4,31 +4,35 @@ import { ThemeProvider } from "@/ui/theme-provider";
 import "@/ui/globals.css";
 
 export const metadata: Metadata = {
-  title: "Sanudin | Software Engineer and Developer",
+  title: "Sanudin — Software Engineer & Frontend Enthusiast",
   description:
-    "A software engineer and developer passionate about helping entrepreneurs create great products.",
+    "Software engineer and frontend enthusiast based in Indonesia. Strongest on the backend — APIs, integrations, and systems — but care about the full picture from database to UI. Writing about what I learn and build.",
   authors: [{ name: "Sanudin", url: "https://sanudin.dev" }],
   keywords: [
     "sanudin",
-    "sanudin-dev",
+    "sanudin dev",
     "software engineer",
-    "developer",
+    "backend engineer",
+    "frontend enthusiast",
     "web developer",
-    "nextjs",
-    "portfolio website",
-    "portfolio site",
+    "API developer",
+    "Next.js",
+    "TypeScript",
+    "Python",
+    "portfolio",
+    "Indonesia",
   ],
   openGraph: {
-    title: "Sanudin | Software Engineer and Developer",
+    title: "Sanudin — Software Engineer & Frontend Enthusiast",
     description:
-      "Passionate about helping entrepreneurs create great products.",
+      "Backend-leaning software engineer with a frontend eye. Building systems, learning in public, writing for the long term.",
     images: "/og.png",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sanudin | Software Engineer and Developer",
+    title: "Sanudin — Software Engineer & Frontend Enthusiast",
     description:
-      "Passionate about helping entrepreneurs create great products.",
+      "Backend-leaning software engineer with a frontend eye. Building systems, learning in public, writing for the long term.",
     images: "/og.png",
   },
 };
@@ -39,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className={`${montserrat.className} antialiased`}>
         <ThemeProvider
           attribute="class"

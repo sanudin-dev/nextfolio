@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { getPostBySlug, getPostSlugs } from "@/lib/blog";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -48,8 +49,8 @@ export default async function BlogPostPage({ params }: Props) {
           </time>
         )}
       </header>
-      <div className="prose prose-neutral dark:prose-invert max-w-none [&_a]:text-primary [&_a]:underline [&_ul]:list-disc [&_ol]:list-decimal [&_pre]:bg-muted [&_pre]:p-4 [&_pre]:rounded-md">
-        <ReactMarkdown>{post.content}</ReactMarkdown>
+      <div className="prose max-w-none [&_a]:text-primary [&_a]:underline [&_ul]:list-disc [&_ol]:list-decimal [&_pre]:bg-muted [&_pre]:p-4 [&_pre]:rounded-md">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
       </div>
     </article>
   );

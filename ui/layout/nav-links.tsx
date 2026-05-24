@@ -13,6 +13,9 @@ export default function NavLinks() {
         <Link href="/#about">About</Link>
       </Button>
       <Button variant="ghost" className={navLinkClass} asChild>
+        <Link href="/#experience">Experience</Link>
+      </Button>
+      <Button variant="ghost" className={navLinkClass} asChild>
         <Link href="/#projects">Projects</Link>
       </Button>
       <Button variant="ghost" className={navLinkClass} asChild>

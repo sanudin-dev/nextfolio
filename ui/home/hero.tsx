@@ -22,6 +22,7 @@ export default function Hero() {
           width={200}
           height={200}
           src="/sanudin-avatar.png"
+          loading="eager"
         />
         <div className="text-center mx-auto mb-15">
           <h1 className="text-4xl lg:text-6xl my-5 font-bold text-title">
@@ -32,12 +33,15 @@ export default function Hero() {
             👋
           </h1>
           <h2 className="text-xl lg:text-2xl font-semibold text-content">
-            A software engineer, developer, and lifelong learner
+            A software engineer, frontend enthusiast, and lifelong learner
           </h2>
+          <p className="text-md text-content mt-2">
+            Most at home building backend systems, but care deeply about how things look and feel on the surface
+          </p>
         </div>
         {/* Gif maker https://ezgif.com */}
         {/* Icons from https://www.flaticon.com */}
-        <Image alt="Icons" width={48} height={48} src="/icons.webp" />
+        <Image alt="Icons" width={48} height={48} src="/icons.webp" style={{ height: "48px", width: "48px" }} loading="eager" />
       </div>
       <div className="w-[1px] h-[10rem] mt-10 relative overflow-hidden after:absolute after:block after:bg-primary after:w-full after:h-[50%] after:transition-all after:animate-moveme"></div>
     </section>

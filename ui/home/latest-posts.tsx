@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { getPosts } from "@/lib/blog";
-import { Button } from "@/ui/button";
 
 const MAX_POSTS = 4;
 
@@ -16,21 +15,20 @@ export default function LatestPosts() {
     >
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-10">
-          <div className="border border-primary/30 w-14 h-14 rounded-xl text-2xl flex justify-center items-center mx-auto mb-3 bg-background">
+          <div className="border border-white w-14 h-14 rounded-xl text-4xl flex justify-center items-center mx-auto mb-3 bg-white/50">
             📝
           </div>
           <h2 className="font-bold text-2xl mb-2 text-title">
-            Latest from the blog
+            Notes from the journey
           </h2>
-          <p className="text-content mb-2">
-            Recent articles and updates.{" "}
-            <Link
-              href="/blog"
-              className="text-primary hover:underline font-medium"
-            >
-              View all posts →
-            </Link>
-          </p>
+          <p className="text-content">Things I've learned, problems I've solved, and ideas I want to remember.</p>
+          <p className="text-content">Written for my future self, shared for anyone who finds it useful, and kept for my kids to read someday.</p>
+          <Link
+            href="/blog"
+            className="text-primary hover:underline font-medium mt-5 inline-block"
+          >
+            View all posts →
+          </Link>
         </div>
 
         <ul className="grid gap-6 sm:grid-cols-2">
@@ -64,9 +62,6 @@ export default function LatestPosts() {
                   </p>
                 )}
               </Link>
-              <Button variant="outline" size="sm" className="mt-4 w-fit" asChild>
-                <Link href={`/blog/${post.slug}`}>Read more</Link>
-              </Button>
             </li>
           ))}
         </ul>

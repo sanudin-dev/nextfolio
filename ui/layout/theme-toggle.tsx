@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { MoonIcon, SunIcon } from "lucide-react";
+import { LuMoon, LuSun } from "react-icons/lu";
 import { Button } from "@/ui/button";
 
 export function ThemeToggle() {
@@ -30,9 +30,9 @@ export function ThemeToggle() {
       {!mounted ? (
         <span className="size-4" aria-hidden />
       ) : isDark ? (
-        <MoonIcon className="size-4" />
+        <LuMoon className="size-4" />
       ) : (
-        <SunIcon className="size-4" />
+        <LuSun className="size-4" />
       )}
     </Button>
   );

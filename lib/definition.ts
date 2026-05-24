@@ -1,7 +1,10 @@
+import type { IconType } from "react-icons";
+
 export type Skillset = {
   id: string;
   name: string;
-  image: string;
+  icon: IconType;
+  size?: number;
 };
 
 export type Project = {
