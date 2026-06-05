@@ -7,6 +7,10 @@ import {
   SiSass,
   SiBootstrap,
   SiNotion,
+  SiTypescript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiPwa,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 import { Project } from "@/lib/definition";
@@ -17,6 +21,10 @@ const tagIconMap: Record<string, IconType> = {
   sass: SiSass,
   bootstrap: SiBootstrap,
   notion: SiNotion,
+  typescript: SiTypescript,
+  nextjs: SiNextdotjs,
+  tailwindcss: SiTailwindcss,
+  pwa: SiPwa,
 };
 
 export default function ProjectItem({ project }: { project: Project }) {

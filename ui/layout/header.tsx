@@ -7,7 +7,7 @@ import { ThemeToggle } from "./theme-toggle";
 export default function Header() {
   return (
     <header className="sticky top-0 z-99 pt-4 pb-4 flex justify-center px-4">
-      <div className="flex items-center gap-2 sm:gap-4 rounded-full bg-background/90 backdrop-blur border border-border/50 shadow-sm px-3 py-2">
+      <div className="relative flex items-center justify-between sm:justify-normal gap-2 sm:gap-4 w-full sm:w-auto rounded-2xl sm:rounded-full bg-background/90 backdrop-blur border border-border/50 shadow-sm px-3 py-2">
         <Link aria-label="Home" className="shrink-0 rounded-full p-1 hover:bg-accent" href="/">
           <Image
             alt="Sanudin Logo"
@@ -17,9 +17,9 @@ export default function Header() {
             className="size-8"
           />
         </Link>
-        <Separator orientation="vertical" className="mx-1 h-6" />
+        <Separator orientation="vertical" className="hidden sm:block mx-1 h-6" />
         <NavLinks />
-        <Separator orientation="vertical" className="mx-1 h-6" />
+        <Separator orientation="vertical" className="hidden sm:block mx-1 h-6" />
         <ThemeToggle />
       </div>
     </header>
