@@ -56,13 +56,15 @@ export default function BlogPage() {
               {post.description && (
                 <p className="text-content mt-1">{post.description}</p>
               )}
-              <TagList tags={post.tags} />
-              <Link
-                href={`/blog/${post.slug}`}
-                className="mt-5 hover:text-primary text-sm inline-block"
-              >
-                Read more →
-              </Link>
+              <div className="flex items-end justify-between mt-5">
+                <TagList tags={post.tags} className="" />
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="hover:text-primary text-sm shrink-0 ml-4"
+                >
+                  Read more →
+                </Link>
+              </div>
             </li>
           ))}
         </ul>
