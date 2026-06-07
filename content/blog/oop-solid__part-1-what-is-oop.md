@@ -2,6 +2,7 @@
 title: "OOP for Everyone: Blueprints, Robots, and the 4 Pillars Explained Simply"
 description: "Object Oriented Programming doesn't have to be intimidating. In this post, we break down classes, objects, and the four pillars of OOP using everyday analogies — simple enough that even a child could understand."
 date: "2026-05-24"
+tags: ["oop", "solid", "programming", "beginners"]
 ---
 
 > **Series: Clean Code from the Ground Up**

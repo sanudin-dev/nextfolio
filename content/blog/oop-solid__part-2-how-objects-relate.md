@@ -2,6 +2,7 @@
 title: "When Objects Meet: A Friendly Guide to Relationships in OOP"
 description: "Objects don't live in isolation — they talk, depend on, and sometimes can't exist without each other. This post explores the different types of relationships in OOP: association, aggregation, composition, dependency, and generalization, with analogies that make each one click."
 date: "2026-05-24"
+tags: ["oop", "solid", "programming", "beginners"]
 ---
 
 > **Series: Clean Code from the Ground Up**

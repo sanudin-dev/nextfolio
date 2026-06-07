@@ -2,6 +2,7 @@
 title: "Why Bad Design Hurts: The Three Code Smells Every Developer Should Know"
 description: "Before learning the rules of good design, you need to understand what bad design actually looks like — and why it's so painful. This post introduces Software Design Principles and the three warning signs that your codebase is heading in the wrong direction: rigidity, fragility, and immobility."
 date: "2026-05-24"
+tags: ["oop", "solid", "programming", "beginners"]
 ---
 
 > **Series: Clean Code from the Ground Up**

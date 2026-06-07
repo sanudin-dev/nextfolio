@@ -9,6 +9,7 @@ export type PostMeta = {
   title: string;
   description: string;
   date: string;
+  tags: string[];
 };
 
 export type Post = PostMeta & {
@@ -35,6 +36,7 @@ export function getPosts(): PostMeta[] {
         title: (data.title as string) ?? slug,
         description: (data.description as string) ?? "",
         date: (data.date as string) ?? "",
+        tags: (data.tags as string[]) ?? [],
       };
     })
     .sort((a, b) => b.date.localeCompare(a.date));
@@ -54,6 +56,7 @@ export function getPostBySlug(slug: string): Post | null {
     title: (data.title as string) ?? slug,
     description: (data.description as string) ?? "",
     date: (data.date as string) ?? "",
+    tags: (data.tags as string[]) ?? [],
     content,
   };
 }

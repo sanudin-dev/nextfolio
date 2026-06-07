@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getPosts } from "@/lib/blog";
+import TagList from "@/ui/tag-list";
 
 const MAX_POSTS = 4;
 
@@ -67,6 +68,7 @@ export default function LatestPosts() {
                     {post.description}
                   </p>
                 )}
+                <TagList tags={post.tags} />
               </Link>
             </li>
           ))}

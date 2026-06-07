@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getPosts } from "@/lib/blog";
 import { Separator } from "@/ui/separator";
+import TagList from "@/ui/tag-list";
 
 export const metadata = {
   title: "Blog | Sanudin",
@@ -32,7 +33,14 @@ export default function BlogPage() {
         <ul className="space-y-8">
           {posts.map((post) => (
             <li key={post.slug} className="border-b border-border pb-6">
-              <h2 className="text-xl font-semibold text-title">{post.title}</h2>
+              <h2 className="text-xl font-semibold text-title">
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="hover:text-primary"
+                >
+                  {post.title}
+                </Link>
+              </h2>
               {post.date && (
                 <time
                   dateTime={post.date}
@@ -48,6 +56,7 @@ export default function BlogPage() {
               {post.description && (
                 <p className="text-content mt-1">{post.description}</p>
               )}
+              <TagList tags={post.tags} />
               <Link
                 href={`/blog/${post.slug}`}
                 className="mt-5 hover:text-primary text-sm inline-block"

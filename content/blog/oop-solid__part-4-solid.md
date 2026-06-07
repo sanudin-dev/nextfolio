@@ -2,6 +2,7 @@
 title: "SOLID: 5 Rules That Will Change How You Write Code Forever"
 description: "SOLID is a set of five principles that help you write code that's easy to change, easy to understand, and easy to reuse. This post breaks down each principle with simple analogies — from robot chefs to Swiss Army knives — so they actually stick."
 date: "2026-05-24"
+tags: ["oop", "solid", "programming", "beginners"]
 ---
 
 > **Series: Clean Code from the Ground Up**
