@@ -9,7 +9,11 @@ const subscribe = () => () => {};
 
 export function ThemeToggle() {
   const { setTheme, resolvedTheme } = useTheme();
-  const mounted = useSyncExternalStore(subscribe, () => true, () => false);
+  const mounted = useSyncExternalStore(
+    subscribe,
+    () => true,
+    () => false
+  );
 
   const isDark = mounted && resolvedTheme === "dark";
 

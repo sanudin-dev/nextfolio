@@ -9,11 +9,7 @@ export default function Hero() {
     >
       <div className="absolute inset-x-0 top-0 h-[min(420px,70vh)] overflow-hidden pointer-events-none">
         <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,black_0%,black_60%,transparent_100%)]">
-          <BackgroundRippleEffect
-            rows={6}
-            cols={20}
-            cellSize={44}
-          />
+          <BackgroundRippleEffect rows={6} cols={20} cellSize={44} />
         </div>
       </div>
       <div className="relative z-10 flex w-full items-center flex-col px-6">
@@ -36,12 +32,20 @@ export default function Hero() {
             A software engineer, frontend enthusiast, and lifelong learner
           </h2>
           <p className="text-md text-content mt-2">
-            Most at home building backend systems, but care deeply about how things look and feel on the surface
+            Most at home building backend systems, but care deeply about how
+            things look and feel on the surface
           </p>
         </div>
         {/* Gif maker https://ezgif.com */}
         {/* Icons from https://www.flaticon.com */}
-        <Image alt="Icons" width={48} height={48} src="/icons.webp" style={{ height: "48px", width: "48px" }} loading="eager" />
+        <Image
+          alt="Icons"
+          width={48}
+          height={48}
+          src="/icons.webp"
+          style={{ height: "48px", width: "48px" }}
+          loading="eager"
+        />
       </div>
       <div className="w-[1px] h-[10rem] mt-10 relative overflow-hidden after:absolute after:block after:bg-primary after:w-full after:h-[50%] after:transition-all after:animate-moveme"></div>
     </section>

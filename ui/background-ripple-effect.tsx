@@ -24,7 +24,7 @@ export const BackgroundRippleEffect = ({
       className={cn(
         "absolute inset-0 h-full w-full",
         "[--cell-border-color:var(--muted-foreground)] [--cell-fill-color:var(--muted)] [--cell-shadow-color:#fafafa]",
-        "dark:[--cell-border-color:#52525b] dark:[--cell-fill-color:var(--muted)] dark:[--cell-shadow-color:#3f3f46]",
+        "dark:[--cell-border-color:#52525b] dark:[--cell-fill-color:var(--muted)] dark:[--cell-shadow-color:#3f3f46]"
       )}
     >
       <div className="relative h-auto w-auto overflow-hidden">
@@ -79,7 +79,7 @@ const DivGrid = ({
 }: DivGridProps) => {
   const cells = useMemo(
     () => Array.from({ length: rows * cols }, (_, idx) => idx),
-    [rows, cols],
+    [rows, cols]
   );
 
   const gridStyle: React.CSSProperties = {
@@ -115,7 +115,7 @@ const DivGrid = ({
             className={cn(
               "cell relative border opacity-40 transition-opacity duration-150 will-change-transform hover:opacity-80 shadow-[0px_0px_24px_0px_var(--cell-shadow-color)_inset] dark:shadow-[0px_0px_40px_1px_var(--cell-shadow-color)_inset]",
               clickedCell && "animate-cell-ripple [animation-fill-mode:none]",
-              !interactive && "pointer-events-none",
+              !interactive && "pointer-events-none"
             )}
             style={{
               backgroundColor: fillColor,

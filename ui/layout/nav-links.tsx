@@ -22,7 +22,10 @@ export default function NavLinks() {
   return (
     <>
       {/* Desktop nav */}
-      <nav className="hidden sm:flex items-center gap-0.5 sm:gap-1" aria-label="Main navigation">
+      <nav
+        className="hidden sm:flex items-center gap-0.5 sm:gap-1"
+        aria-label="Main navigation"
+      >
         {links.map(({ href, label }) => (
           <Button key={href} variant="ghost" className={navLinkClass} asChild>
             <Link href={href}>{label}</Link>

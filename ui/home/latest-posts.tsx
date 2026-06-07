@@ -21,8 +21,14 @@ export default function LatestPosts() {
           <h2 className="font-bold text-2xl mb-2 text-title">
             Notes from the journey
           </h2>
-          <p className="text-content">Things I&apos;ve learned, problems I&apos;ve solved, and ideas I want to remember.</p>
-          <p className="text-content">Written for my future self, shared for anyone who finds it useful, and kept for my kids to read someday.</p>
+          <p className="text-content">
+            Things I&apos;ve learned, problems I&apos;ve solved, and ideas I
+            want to remember.
+          </p>
+          <p className="text-content">
+            Written for my future self, shared for anyone who finds it useful,
+            and kept for my kids to read someday.
+          </p>
           <Link
             href="/blog"
             className="text-primary hover:underline font-medium mt-5 inline-block"

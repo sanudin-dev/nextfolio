@@ -12,7 +12,8 @@ export default function projects() {
         </div>
         <h2 className="font-bold text-2xl mb-2 text-title">Projects</h2>
         <p className="text-content">
-          A mix of work I&apos;ve built to learn, experiment, and solve real problems.
+          A mix of work I&apos;ve built to learn, experiment, and solve real
+          problems.
         </p>
       </div>
 

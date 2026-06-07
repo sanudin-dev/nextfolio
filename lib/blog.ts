@@ -37,7 +37,7 @@ export function getPosts(): PostMeta[] {
         date: (data.date as string) ?? "",
       };
     })
-    .sort((a, b) => (b.date.localeCompare(a.date)));
+    .sort((a, b) => b.date.localeCompare(a.date));
 
   return posts;
 }

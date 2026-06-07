@@ -3,7 +3,9 @@ import Footer from "@/ui/layout/footer";
 
 export default function BlogLayout({
   children,
-}: { children: React.ReactNode }) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <>
       <Header />

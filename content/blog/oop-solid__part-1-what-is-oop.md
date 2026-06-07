@@ -8,7 +8,6 @@ date: "2026-05-24"
 > Part 1 of 4 — Object Oriented Programming
 > 🕐 ~5 min read · Beginner friendly
 
-
 > **📝 A note on this article**
 > This post is based on my personal study notes on OOP and SOLID principles. To make these notes more readable and useful — for myself and for others — I worked with AI to help expand and structure them into a proper blog format. The ideas, learning journey, and understanding are mine; the AI helped with the writing and presentation.
 

@@ -11,7 +11,12 @@ import {
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 
-export const skills: { id: string; name: string; icon: IconType; size?: number }[] = [
+export const skills: {
+  id: string;
+  name: string;
+  icon: IconType;
+  size?: number;
+}[] = [
   { id: "1", name: "TypeScript", icon: SiTypescript, size: 22 },
   { id: "2", name: "Next.js", icon: SiNextdotjs, size: 24 },
   { id: "3", name: "Node.js", icon: SiNodedotjs, size: 24 },

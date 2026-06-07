@@ -50,7 +50,9 @@ export default async function BlogPostPage({ params }: Props) {
         )}
       </header>
       <div className="prose max-w-none [&_a]:text-primary [&_a]:underline [&_ul]:list-disc [&_ol]:list-decimal [&_pre]:bg-muted [&_pre]:p-4 [&_pre]:rounded-md">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          {post.content}
+        </ReactMarkdown>
       </div>
     </article>
   );

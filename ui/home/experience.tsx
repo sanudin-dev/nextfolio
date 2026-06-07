@@ -9,10 +9,15 @@ export default function Experience() {
           <div className="border border-white w-14 h-14 rounded-xl text-4xl flex justify-center items-center mx-auto mb-3 bg-white/50">
             💼
           </div>
-          <h2 className="font-bold text-2xl mb-2 text-title">
-            Experience
-          </h2>
-          <p className="text-content">Senior Software Engineer at AutoWealth, a Singapore-based fintech platform. Working across the stack — from legacy PHP codebases to complex API integrations, system architecture, and frontend implementation — including writing a custom PHP connector to fix a security issue in our MyInfo (NDI) implementation — and taking full ownership of features from planning to production.</p>
+          <h2 className="font-bold text-2xl mb-2 text-title">Experience</h2>
+          <p className="text-content">
+            Senior Software Engineer at AutoWealth, a Singapore-based fintech
+            platform. Working across the stack — from legacy PHP codebases to
+            complex API integrations, system architecture, and frontend
+            implementation — including writing a custom PHP connector to fix a
+            security issue in our MyInfo (NDI) implementation — and taking full
+            ownership of features from planning to production.
+          </p>
         </div>
       </div>
     </section>
