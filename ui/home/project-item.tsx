@@ -31,7 +31,17 @@ export default function ProjectItem({ project }: { project: Project }) {
   return (
     <article className="md:flex md:justify-center md:item-center md:gap-20 py-10 px-10">
       <div className="text-content mb-10 md:mb-0">
-        <h3 className="font-bold text-xl text-primary mb-5">{project.title}</h3>
+        <div className="flex items-center gap-3 mb-5">
+          <h3 className="font-bold text-xl text-primary">{project.title}</h3>
+          {project.type === "app" && (
+            <span
+              title="This is a publicly available app — you can use it right now!"
+              className="text-xs font-semibold px-2 py-0.5 rounded-full bg-green-500/15 text-green-600 border border-green-500/30 shrink-0 cursor-help"
+            >
+              Live App
+            </span>
+          )}
+        </div>
         <div className="prose prose-neutral max-w-none text-justify [&_p]:mb-3 [&_a]:text-primary [&_a]:underline">
           <ReactMarkdown>{project.description}</ReactMarkdown>
         </div>

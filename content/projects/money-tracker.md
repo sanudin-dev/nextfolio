@@ -7,4 +7,5 @@ tags: ["typescript", "nextjs", "tailwindcss", "pwa"]
 link: "https://mt.sanudin.dev/"
 github: "https://github.com/sanudin-dev/money-tracker"
 date: "2026-06-01"
+type: "app"
 ---

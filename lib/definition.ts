@@ -20,4 +20,6 @@ export type Project = {
   content?: string;
   /** Optional date for ordering (e.g. "2024-01-01") */
   date?: string;
+  /** "app" for publicly usable products, "project" (default) for demos */
+  type?: string;
 };

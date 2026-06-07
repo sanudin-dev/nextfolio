@@ -7,4 +7,5 @@ tags: ["javascript"]
 link: "https://ddevs-story.web.app/"
 github: "https://github.com/sanudin-dev/ddevs-story"
 date: "2024-01-04"
+type: "project"
 ---

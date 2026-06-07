@@ -9,4 +9,5 @@ tags: ["sass", "bootstrap", "notion"]
 link: "https://ziah.sanudin.dev/"
 github: "https://github.com/sanudin-dev/ziah"
 date: "2024-01-01"
+type: "project"
 ---

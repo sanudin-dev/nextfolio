@@ -9,4 +9,5 @@ tags: ["javascript", "webpack"]
 link: "https://notes-app-sanudin.vercel.app/"
 github: "https://github.com/sanudin-dev/notes-app-v1"
 date: "2024-01-03"
+type: "project"
 ---

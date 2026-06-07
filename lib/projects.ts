@@ -30,6 +30,7 @@ export function getProjects(): Project[] {
         tags: Array.isArray(data.tags) ? (data.tags as string[]) : [],
         link: (data.link as string) ?? "",
         github: (data.github as string) ?? "",
+        type: (data.type as string) ?? "project",
         ...(date && { date }),
         ...(content.trim() && { content: content.trim() }),
       };
@@ -56,6 +57,7 @@ export function getProjectBySlug(slug: string): Project | null {
     tags: Array.isArray(data.tags) ? (data.tags as string[]) : [],
     link: (data.link as string) ?? "",
     github: (data.github as string) ?? "",
+    type: (data.type as string) ?? "project",
     ...(date && { date }),
     ...(content.trim() && { content: content.trim() }),
   };
