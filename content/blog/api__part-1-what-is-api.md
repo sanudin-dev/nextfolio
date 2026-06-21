@@ -1,7 +1,7 @@
 ---
 title: "What Is an API, Really?"
 description: "APIs are everywhere — but what actually is one? This article breaks down what an API really is, how the client-server request-response cycle works, HTTP fundamentals, the difference between sync and async communication, and why API design matters from day one."
-date: "2026-07-06"
+date: "2026-06-21"
 tags: ["api", "webdev", "backend", "beginners"]
 ---
 
