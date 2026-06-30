@@ -187,13 +187,13 @@ Build the bridge first. Then decide whether it's for pedestrians, cars, or train
 
 This series will go deeper on each piece we touched on here. Next up: **REST — The API Style Everyone Uses** — where we'll look at how RESTful APIs are structured, what makes a good resource design, and what HTTP methods actually mean in practice.
 
-**→ [Part 2: REST — The API Style Everyone Uses (coming soon)]()**
+**→ [Part 2: REST — The API Style Everyone Uses](./api__part-2-rest)**
 
 ---
 
 > 📌 **Series overview:**
 > - **Part 1: What Is an API, Really?** ← you are here
-> - Part 2: REST — The API Style Everyone Uses (coming soon)
+> - Part 2: REST — The API Style Everyone Uses
 > - Part 3: GraphQL: When REST Gets Messy (coming soon)
 > - Part 4: gRPC: APIs Built for Speed (coming soon)
 > - Part 5: API Patterns You'll Actually Use in Production (coming soon)
