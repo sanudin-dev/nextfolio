@@ -1,11 +1,11 @@
-import Header from "@/ui/layout/header";
-import Hero from "@/ui/home/hero";
-import About from "@/ui/home/about";
-import LatestPosts from "@/ui/home/latest-posts";
-import Projects from "@/ui/home/projects";
-import Experience from "@/ui/home/experience";
-import Contact from "@/ui/home/contact";
-import Footer from "@/ui/layout/footer";
+import Header from '@/ui/layout/header'
+import Hero from '@/ui/home/hero'
+import About from '@/ui/home/about'
+import LatestPosts from '@/ui/home/latest-posts'
+import Projects from '@/ui/home/projects'
+import Experience from '@/ui/home/experience'
+import Contact from '@/ui/home/contact'
+import Footer from '@/ui/layout/footer'
 
 export default function Page() {
   return (
@@ -21,5 +21,5 @@ export default function Page() {
       </main>
       <Footer />
     </>
-  );
+  )
 }

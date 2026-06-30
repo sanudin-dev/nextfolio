@@ -1,6 +1,6 @@
-import { montserrat } from "../fonts";
-import Connects from "../connects";
-import GoToTop from "../buttons/gototop";
+import { montserrat } from '../fonts'
+import Connects from '../connects'
+import GoToTop from '../buttons/gototop'
 
 export default function Footer() {
   return (
@@ -16,12 +16,12 @@ export default function Footer() {
             <Connects />
           </div>
           <p className="max-w-[15rem] m-auto mt-8 sm:m-0 sm:max-w-[16rem] md:max-w-full sm:order-first">
-            &copy; {new Date().getFullYear()} Sanudin. Developed with ❤️. Build
-            with Next.js hosted on Vercel.
+            &copy; {new Date().getFullYear()} Sanudin. Developed with ❤️. Built with Next.js and
+            hosted on Vercel.
           </p>
         </div>
       </div>
       <div className="h-3 bg-gradient-to-r from-green-500 to-blue-500"></div>
     </footer>
-  );
+  )
 }

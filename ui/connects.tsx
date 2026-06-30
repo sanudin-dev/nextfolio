@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub, FaDev } from "react-icons/fa6";
+import { FaLinkedin, FaGithub, FaDev } from 'react-icons/fa6'
 
 export default function Connects() {
   return (
@@ -31,5 +31,5 @@ export default function Connects() {
         <span className="sr-only">Dev.to</span>
       </a>
     </nav>
-  );
+  )
 }

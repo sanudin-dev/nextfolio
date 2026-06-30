@@ -1,15 +1,15 @@
-"use client";
+'use client'
 
-import { FaChevronUp } from "react-icons/fa6";
-import { Button } from "@/ui/button";
+import { FaChevronUp } from 'react-icons/fa6'
+import { Button } from '@/ui/button'
 
 export default function GoToTop() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
-    });
-  };
+      behavior: 'smooth',
+    })
+  }
 
   return (
     <Button
@@ -22,5 +22,5 @@ export default function GoToTop() {
     >
       <FaChevronUp />
     </Button>
-  );
+  )
 }

@@ -1,8 +1,8 @@
-import ProjectItem from "./project-item";
-import { getProjects } from "@/lib/projects";
+import ProjectItem from './project-item'
+import { getProjects } from '@/lib/projects'
 
 export default function projects() {
-  const projects = getProjects();
+  const projects = getProjects()
 
   return (
     <section id="projects" className="w-full py-20 my-10">
@@ -12,8 +12,7 @@ export default function projects() {
         </div>
         <h2 className="font-bold text-2xl mb-2 text-title">Projects</h2>
         <p className="text-content">
-          A mix of work I&apos;ve built to learn, experiment, and solve real
-          problems.
+          A mix of work I&apos;ve built to learn, experiment, and solve real problems.
         </p>
       </div>
 
@@ -25,5 +24,5 @@ export default function projects() {
         </div>
       </section>
     </section>
-  );
+  )
 }

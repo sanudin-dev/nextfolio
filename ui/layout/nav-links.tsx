@@ -1,31 +1,28 @@
-"use client";
+'use client'
 
-import Link from "next/link";
-import { useState } from "react";
-import { Button } from "@/ui/button";
-import { HiMenu, HiX } from "react-icons/hi";
+import Link from 'next/link'
+import { useState } from 'react'
+import { Button } from '@/ui/button'
+import { HiMenu, HiX } from 'react-icons/hi'
 
 const links = [
-  { href: "/#about", label: "About" },
-  { href: "/#experience", label: "Experience" },
-  { href: "/#projects", label: "Projects" },
-  { href: "/#contact", label: "Contact" },
-  { href: "/blog", label: "Blog" },
-];
+  { href: '/#about', label: 'About' },
+  { href: '/#experience', label: 'Experience' },
+  { href: '/#projects', label: 'Projects' },
+  { href: '/#contact', label: 'Contact' },
+  { href: '/blog', label: 'Blog' },
+]
 
 const navLinkClass =
-  "text-content hover:text-primary text-sm tracking-widest font-medium h-auto px-3 py-2";
+  'text-content hover:text-primary text-sm tracking-widest font-medium h-auto px-3 py-2'
 
 export default function NavLinks() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   return (
     <>
       {/* Desktop nav */}
-      <nav
-        className="hidden sm:flex items-center gap-0.5 sm:gap-1"
-        aria-label="Main navigation"
-      >
+      <nav className="hidden sm:flex items-center gap-0.5 sm:gap-1" aria-label="Main navigation">
         {links.map(({ href, label }) => (
           <Button key={href} variant="ghost" className={navLinkClass} asChild>
             <Link href={href}>{label}</Link>
@@ -36,7 +33,7 @@ export default function NavLinks() {
       {/* Mobile hamburger button */}
       <button
         className="sm:hidden p-2 rounded-full hover:bg-accent text-content"
-        aria-label={open ? "Close menu" : "Open menu"}
+        aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
       >
@@ -59,5 +56,5 @@ export default function NavLinks() {
         </div>
       )}
     </>
-  );
+  )
 }

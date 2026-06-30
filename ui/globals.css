@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin "@tailwindcss/typography";
 
 :root,
@@ -73,8 +73,7 @@
   --color-popover-foreground: var(--popover-foreground);
 
   --animate-moveme: moveme 1s ease-in-out infinite;
-  --animate-cell-ripple: cell-ripple var(--duration, 200ms) ease-out none 1
-    var(--delay, 0ms);
+  --animate-cell-ripple: cell-ripple var(--duration, 200ms) ease-out none 1 var(--delay, 0ms);
 
   @keyframes cell-ripple {
     0% {

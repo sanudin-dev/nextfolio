@@ -1,6 +1,6 @@
-import Image from "next/image";
-import ReactMarkdown from "react-markdown";
-import { FaGithub, FaArrowUpRightFromSquare } from "react-icons/fa6";
+import Image from 'next/image'
+import ReactMarkdown from 'react-markdown'
+import { FaGithub, FaArrowUpRightFromSquare } from 'react-icons/fa6'
 import {
   SiJavascript,
   SiWebpack,
@@ -11,9 +11,9 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiPwa,
-} from "react-icons/si";
-import type { IconType } from "react-icons";
-import { Project } from "@/lib/definition";
+} from 'react-icons/si'
+import type { IconType } from 'react-icons'
+import { Project } from '@/lib/definition'
 
 const tagIconMap: Record<string, IconType> = {
   javascript: SiJavascript,
@@ -25,7 +25,7 @@ const tagIconMap: Record<string, IconType> = {
   nextjs: SiNextdotjs,
   tailwindcss: SiTailwindcss,
   pwa: SiPwa,
-};
+}
 
 export default function ProjectItem({ project }: { project: Project }) {
   return (
@@ -33,7 +33,7 @@ export default function ProjectItem({ project }: { project: Project }) {
       <div className="text-content mb-10 md:mb-0">
         <div className="flex items-center gap-3 mb-5">
           <h3 className="font-bold text-xl text-primary">{project.title}</h3>
-          {project.type === "app" && (
+          {project.type === 'app' && (
             <span
               title="This is a publicly available app — you can use it right now!"
               className="text-xs font-semibold px-2 py-0.5 rounded-full bg-green-500/15 text-green-600 border border-green-500/30 shrink-0 cursor-help"
@@ -47,8 +47,8 @@ export default function ProjectItem({ project }: { project: Project }) {
         </div>
         <div className="mt-7.5 flex flex-wrap gap-3">
           {project.tags.map((tag, i) => {
-            const Icon = tagIconMap[tag];
-            if (!Icon) return null;
+            const Icon = tagIconMap[tag]
+            if (!Icon) return null
             return (
               <div
                 key={i}
@@ -57,7 +57,7 @@ export default function ProjectItem({ project }: { project: Project }) {
               >
                 <Icon size={20} />
               </div>
-            );
+            )
           })}
         </div>
         <div className="mt-10 flex gap-5">
@@ -87,5 +87,5 @@ export default function ProjectItem({ project }: { project: Project }) {
         src={project.image}
       />
     </article>
-  );
+  )
 }

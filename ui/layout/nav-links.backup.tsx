@@ -1,11 +1,11 @@
-"use client";
+'use client'
 
-import Link from "next/link";
-import { Button } from "@/ui/button";
-import { ThemeToggle } from "./theme-toggle";
+import Link from 'next/link'
+import { Button } from '@/ui/button'
+import { ThemeToggle } from './theme-toggle'
 
 const navLinkClass =
-  "text-content hover:text-primary text-sm tracking-widest font-bold h-auto px-3 py-2";
+  'text-content hover:text-primary text-sm tracking-widest font-bold h-auto px-3 py-2'
 
 export default function NavLinks() {
   return (
@@ -24,5 +24,5 @@ export default function NavLinks() {
       </Button>
       <ThemeToggle />
     </nav>
-  );
+  )
 }
