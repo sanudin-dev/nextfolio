@@ -64,7 +64,7 @@ export default function ProjectItem({ project }: { project: Project }) {
           <a
             href={project.github}
             target="_blank"
-            className="border border-primary text-primary bg-white px-4 py-2 rounded-lg text-sm font-semibold w-[10rem] flex justify-center items-center transition-all hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 hover:text-white active:scale-95"
+            className="border border-primary text-primary bg-white px-4 py-2 rounded-lg text-sm font-semibold w-40 flex justify-center items-center transition-all hover:bg-linear-to-r hover:from-green-500 hover:to-blue-500 hover:text-white active:scale-95"
           >
             Source Code
             <FaGithub className="inline ms-2" size="1.2em" />
@@ -72,7 +72,7 @@ export default function ProjectItem({ project }: { project: Project }) {
           <a
             href={project.link}
             target="_blank"
-            className="border border-primary text-white bg-primary px-4 py-2 rounded-lg text-sm font-semibold w-[10rem] flex justify-center items-center hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 active:scale-95"
+            className="border border-primary text-white bg-primary px-4 py-2 rounded-lg text-sm font-semibold w-40 flex justify-center items-center hover:bg-linear-to-r hover:from-green-500 hover:to-blue-500 active:scale-95"
           >
             See Live
             <FaArrowUpRightFromSquare className="inline ms-2" size="1em" />

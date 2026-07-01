@@ -35,7 +35,7 @@ export default function LatestPosts() {
               key={post.slug}
               className="rounded-lg border border-border bg-background p-5 shadow-sm transition-shadow hover:shadow-md"
             >
-              <Link href={`/blog/${post.slug}`} className="group block h-full flex flex-col">
+              <Link href={`/blog/${post.slug}`} className="group h-full flex flex-col">
                 <h3 className="font-semibold text-title group-hover:text-primary transition-colors line-clamp-2">
                   {post.title}
                 </h3>

@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section id="hero" className="relative flex w-full items-center flex-col py-8 lg:py-16">
       <div className="absolute inset-x-0 top-0 h-[min(420px,70vh)] overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,black_0%,black_60%,transparent_100%)]">
+        <div className="absolute inset-0 mask-[linear-gradient(to_bottom,black_0%,black_60%,transparent_100%)]">
           <BackgroundRippleEffect rows={6} cols={20} cellSize={44} />
         </div>
       </div>
@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="text-center mx-auto mb-15">
           <h1 className="text-4xl lg:text-6xl my-5 font-bold text-title">
             Hi, I&apos;m
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-blue-600 mx-3">
+            <span className="bg-clip-text text-transparent bg-linear-to-r from-green-500 to-blue-600 mx-3">
               Sanudin
             </span>
             👋
@@ -42,9 +42,10 @@ export default function Hero() {
           src="/icons.webp"
           style={{ height: '48px', width: '48px' }}
           loading="eager"
+          unoptimized
         />
       </div>
-      <div className="w-[1px] h-[10rem] mt-10 relative overflow-hidden after:absolute after:block after:bg-primary after:w-full after:h-[50%] after:transition-all after:animate-moveme"></div>
+      <div className="w-px h-40 mt-10 relative overflow-hidden after:absolute after:block after:bg-primary after:w-full after:h-[50%] after:transition-all after:animate-moveme"></div>
     </section>
   )
 }

@@ -18,7 +18,7 @@ export default function Contact() {
         <div className="flex justify-center items-center gap-5 mt-6">
           <a
             href="mailto:hello.sanudin@gmail.com"
-            className="bg-primary text-white text-sm font-semibold py-2 px-5 block rounded-lg max-w-[20rem] hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 active:scale-95"
+            className="bg-primary text-white text-sm font-semibold py-2 px-5 block rounded-lg max-w-[20rem] hover:bg-linear-to-r hover:from-green-500 hover:to-blue-500 active:scale-95"
           >
             Send an email <LuSend className="inline ms-2" size="1.2em" />
           </a>
@@ -26,7 +26,7 @@ export default function Contact() {
             href="https://www.linkedin.com/in/sanudin/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-primary text-white text-sm font-semibold py-2 px-5 block rounded-lg max-w-[20rem] hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 active:scale-95"
+            className="bg-primary text-white text-sm font-semibold py-2 px-5 block rounded-lg max-w-[20rem] hover:bg-linear-to-r hover:from-green-500 hover:to-blue-500 active:scale-95"
           >
             Find me on LinkedIn <FaLinkedin className="inline ms-2" size="1.2em" />
           </a>
