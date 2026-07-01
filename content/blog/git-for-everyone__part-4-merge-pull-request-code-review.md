@@ -84,6 +84,85 @@ The feature commits are replayed on top of main, one by one — no merge commit 
 
 ---
 
+## Git Rebase: Rewriting Where Your Branch Started
+
+When you're working on a feature branch, `main` keeps moving forward while you're busy:
+
+```
+main:    A → B → C → D → E
+                  \
+feature:           F → G → H
+```
+
+You branched off at `C`, but now `main` is at `E`. Your branch is "behind."
+
+**Merge** brings `main` into your branch by creating a new merge commit — history is preserved but gets busier over time.
+
+**Rebase** does something different — it picks up your commits (F, G, H) and *replays* them on top of the latest `main`, as if you had branched off from `E` all along:
+
+```
+main:    A → B → C → D → E
+                           \
+feature:                    F' → G' → H'
+```
+
+The result is a perfectly straight, clean line. No merge commit. No branching noise in the history.
+
+> **Analogy for kids:** Imagine you started writing a report based on last week's data. While you were writing, someone updated the data. Instead of writing a note saying "oh and also here's the old data I used" (merge), you go back and rewrite the report as if you had the new data from the beginning (rebase). The report itself doesn't change — just where it starts from.
+
+### The Golden Rule of Rebase
+
+> ⚠️ **Never rebase a branch that other people are also working on.** Rebase rewrites commit history — if a teammate has those commits locally, their history will conflict with yours after a rebase. It gets messy fast.
+
+**Solo feature branch → rebase freely. Shared branch → stick with merge.**
+
+### A Typical Rebase Workflow
+
+```bash
+# You're on your feature branch
+git switch feature/add-search-bar
+
+# Fetch the latest from remote
+git fetch origin
+
+# Rebase your branch on top of the latest main
+git rebase origin/main
+```
+
+If there are conflicts during rebase, Git pauses at each conflicting commit and lets you fix them one at a time:
+
+```bash
+# Fix the conflict in the file, then stage it
+git add <file>
+
+# Continue to the next commit
+git rebase --continue
+
+# Or abort entirely and go back to before
+git rebase --abort
+```
+
+After rebasing, your local branch history has been rewritten — so you need to force push:
+
+```bash
+# Force push after rebase (never use plain --force on a shared branch)
+git push origin feature/add-search-bar --force-with-lease
+```
+
+`--force-with-lease` is safer than `--force` — it checks that nobody else has pushed to the branch since you last fetched, protecting you from accidentally overwriting someone else's work.
+
+### Rebase vs Merge: When to Use Which
+
+| Situation | Use |
+|---|---|
+| Solo feature branch, want clean history | `rebase` |
+| Shared branch or already merged to main | `merge` |
+| Keeping a long-running branch up to date | `rebase` (stay fresh) |
+| Already pushed and others might have pulled | `merge` (safe) |
+| Preparing a clean PR before review | `rebase` first, then open PR |
+
+---
+
 ## What Is a Pull Request?
 
 A **Pull Request** (PR) — called a **Merge Request** on GitLab — is a formal way of saying:
@@ -222,6 +301,18 @@ git merge --abort
 # After resolving conflicts
 git add <file>
 git commit
+
+# Rebase current branch on top of latest main
+git fetch origin
+git rebase origin/main
+
+# Handle rebase conflicts
+git add <file>                         # Stage resolved conflict
+git rebase --continue                  # Move to next commit
+git rebase --abort                     # Cancel rebase entirely
+
+# Force push after rebase (safer than --force)
+git push origin <branch-name> --force-with-lease
 
 # Squash last N commits interactively
 git rebase -i HEAD~N

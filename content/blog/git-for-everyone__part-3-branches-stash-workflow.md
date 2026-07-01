@@ -265,6 +265,86 @@ git stash pop
 
 ---
 
+## Git Worktree: No Stash Needed
+
+Stash works well for quick interruptions. But what if the other task is going to take longer? Or what if you simply don't want to touch your current work at all?
+
+That's where **Git Worktree** comes in.
+
+Normally, one Git repo = one working directory. You can only have one branch checked out at a time, which is why stashing exists in the first place.
+
+Worktree breaks that limitation. It lets you **check out a second branch in a separate folder**, simultaneously, without touching your current work at all.
+
+```
+/home/user/
+├── my-project/              ← your original folder (feature branch)
+└── my-project-hotfix/       ← new folder created by worktree (hotfix branch)
+```
+
+Both folders point to the **same Git repository** — same history, same commits, same remote. There's no duplication, no separate clone. It's one repo, two windows into it.
+
+> **Analogy for kids:** One book, two bookmarks. The book is your Git repository. Each bookmark is a worktree — a different place you're reading at the same time. The book itself is still one book.
+
+### Basic Worktree Commands
+
+```bash
+# Add a new worktree for an existing branch
+git worktree add ../my-project-hotfix hotfix/login-bug
+
+# Add a new worktree AND create a new branch at the same time
+git worktree add -b hotfix/login-bug ../my-project-hotfix origin/main
+
+# List all active worktrees
+git worktree list
+# Output:
+# /home/user/my-project          abc1234 [feature/add-search-bar]
+# /home/user/my-project-hotfix   def5678 [hotfix/login-bug]
+
+# Remove a worktree when you're done
+git worktree remove ../my-project-hotfix
+```
+
+### A Typical Worktree Workflow
+
+```bash
+# You're deep in feature work — no need to stash anything
+git worktree add -b hotfix/login-bug ../my-project-hotfix origin/main
+
+# Open the hotfix folder in a new editor window
+code ../my-project-hotfix   # or: zed ../my-project-hotfix
+
+# Fix the bug, commit, push — all in that separate folder
+cd ../my-project-hotfix
+git add . && git commit -m "Fix login redirect on mobile"
+git push origin hotfix/login-bug
+
+# Done. Remove the worktree.
+git worktree remove ../my-project-hotfix
+
+# Back in your original folder — nothing has changed, continue your feature
+cd ../my-project
+```
+
+Your feature branch was never touched. No stash, no pop, no risk of forgetting to restore.
+
+### One Rule to Know
+
+You **cannot check out the same branch in two worktrees at the same time**. Each worktree must be on a different branch — which makes sense, since the whole point is parallel isolation.
+
+### Worktree vs Stash: When to Use Which
+
+| | Stash | Worktree |
+|---|---|---|
+| Your current work | Saved and hidden | Stays exactly where it is |
+| Switch branch | In the same folder | Open a different folder |
+| Multiple branches at once | ❌ | ✅ |
+| Ideal for | Quick, short interruptions | Longer parallel work |
+| Editor/IDE | Reopen files in same window | Open a separate editor window |
+
+> **Do GUI tools like GitHub Desktop or GitKraken still see it as one repo?** Yes — they read from the `.git` directory, which is shared. All branches, commits, and history appear exactly the same. Some tools like GitKraken and Fork even show active worktrees explicitly. GitHub Desktop is more basic but will still recognize the repo correctly.
+
+---
+
 ## Quick Reference
 
 ```bash
@@ -276,7 +356,6 @@ git branch -d <branch-name>       # Delete a merged branch
 git push origin <branch-name>     # Push branch to remote
 git fetch origin                  # Fetch latest remote info
 git merge origin/main             # Merge main into current branch
-git rebase origin/main            # Rebase current branch on main
 git stash                         # Save uncommitted work temporarily
 git stash push -m "description"   # Stash with a label
 git stash list                    # See all stashes
@@ -285,6 +364,10 @@ git stash apply stash@{N}         # Restore specific stash (keep in list)
 git stash drop stash@{N}          # Remove a specific stash
 git stash clear                   # Remove all stashes
 git stash -u                      # Stash including untracked files
+git worktree add <path> <branch>  # Check out a branch in a new folder
+git worktree add -b <branch> <path> origin/main  # Create branch + worktree
+git worktree list                 # List all active worktrees
+git worktree remove <path>        # Remove a worktree when done
 ```
 
 ---

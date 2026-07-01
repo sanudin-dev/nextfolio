@@ -175,6 +175,18 @@ GitLens is already installed in many VS Code setups. You might already have it w
 
 ---
 
+## Honorable Mentions: IDEs with Built-in Git
+
+Some modern IDEs come with Git support built in — good enough that you may not need a separate GUI client at all.
+
+**[Zed](https://zed.dev)** is a good example. It's a lightweight, fast code editor with a clean Git panel that handles the essentials: staging, committing, diffing, and branch switching. What makes it stand out is built-in AI support that can help generate commit messages for you — so you spend less time thinking about how to phrase "what changed" and more time on the actual work. If you're already looking for a VS Code alternative that's lighter on resources, Zed is worth trying.
+
+**VS Code** also has its own built-in source control panel (separate from the GitLens extension), which covers the basics well for most day-to-day Git tasks. If you're already in VS Code all day, it's worth exploring before reaching for a separate app.
+
+> If your IDE already handles Git well enough for your workflow, there's no reason to add another tool. The best Git client is the one that gets out of your way.
+
+---
+
 ## Do You Still Need to Know the Terminal?
 
 Yes — at least the basics. Here's why:
